@@ -14,3 +14,18 @@ const int wardCapacities[4] = {20, 10, 10, 5};
 // Bed occupancy matrix Definition
 int bedOccupancy[4][20];
 
+// Patient Details arrays definition
+char patientNames[MAX_PATIENTS][100];
+int patientAges[MAX_PATIENTS];
+int patientUrgency[MAX_PATIENTS];
+
+// Specialty and admission details arrays definition
+int patientSpecialtyID[MAX_PATIENTS];
+int patientIsAdmitted[MAX_PATIENTS];
+int patientWardID[MAX_PATIENTS];
+int patientDaysAdmitted[MAX_PATIENTS];
+int patientAssignedBed[MAX_PATIENTS];
+
+// Global counters
+int totalPatients = 0;
+int specialtyQueueCounts[4] = {0, 0, 0, 0};

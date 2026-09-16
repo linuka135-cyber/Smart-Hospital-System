@@ -12,10 +12,50 @@ int main() {
         }
     }
 
-    printf("===========================================\n");
-    printf(" Smart Hospital & Resource Allocation System\n");
-    printf("===========================================\n");
-    printf("System initializing...\n");
+    int choice;
+    do {
+        printf("\n===========================================\n");
+        printf(" Smart Hospital & Resource Allocation System\n");
+        printf("===========================================\n");
+        printf("1. Register New Patient\n");
+        printf("2. View Priority Queue\n");
+        printf("3. Generate Performance Reports\n");
+        printf("4. Exit System\n");
+        printf("===========================================\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                printf("\n--- Patient Registration Module ---\n");
+
+
+                
+                break;
+            case 2:
+                printf("\n--- Triage Priority Queue ---\n");
+
+
+
+                break;
+            case 3:
+                printf("\n--- Performance Analytics ---\n");
+
+                
+
+
+
+                break;
+            case 4:
+                printf("\nExiting system. Have a great day!\n");
+            
+
+
+                break;
+            default:
+                printf("\nInvalid choice. Please enter a number between 1 and 4.\n");
+        }
+    } while (choice != 4);
 
     return 0;
 }

@@ -10,3 +10,7 @@ const int dailyPatientCaps[4] = {30, 20, 12, 10};
 const char *wardNames[4] = {"General Ward", "Paediatric Ward", "Surgical Ward", "ICU"};
 const float wardDailyRates[4] = {3000.00, 6000.00, 12000.00, 25000.00};
 const int wardCapacities[4] = {20, 10, 10, 5};
+
+// Bed occupancy matrix Definition
+int bedOccupancy[4][20];
+

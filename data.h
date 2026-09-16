@@ -12,4 +12,7 @@ extern const char *wardNames[4];
 extern const float wardDailyRates[4];
 extern const int wardCapacities[4];
 
+// Bed occupancy matrix declaration
+extern int bedOccupancy[4][20];
+
 #endif

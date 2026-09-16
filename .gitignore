@@ -1,0 +1,10 @@
+# Code::Blocks build files and folders
+bin/
+obj/
+*.depend
+*.layout
+*.o
+
+# Windows system files
+Thumbs.db
+Desktop.ini

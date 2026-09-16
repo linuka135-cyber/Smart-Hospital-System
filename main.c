@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "data.h"
+#include "registration.h"
 
 
 int main() {
-
-    // Initialize the bed occupancy matrix to 0 - Available 
+    // Initialize the bed occupancy matrix to 0 - Available
     for (int ward = 0; ward < 4; ward++) {
         for (int bed = 0; bed < 20; bed++) {
             bedOccupancy[ward][bed] = 0;
@@ -27,11 +27,9 @@ int main() {
 
         switch (choice) {
             case 1:
-                printf("\n--- Patient Registration Module ---\n");
-
-
-                
+                registerPatient();
                 break;
+
             case 2:
                 printf("\n--- Triage Priority Queue ---\n");
 
@@ -41,14 +39,14 @@ int main() {
             case 3:
                 printf("\n--- Performance Analytics ---\n");
 
-                
+
 
 
 
                 break;
             case 4:
                 printf("\nExiting system. Have a great day!\n");
-            
+
 
 
                 break;

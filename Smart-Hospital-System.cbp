@@ -31,9 +31,22 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename=".gitignore" />
+		<Unit filename="README.md" />
+		<Unit filename="Smart-Hospital-System.cbp" />
+		<Unit filename="data.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="data.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="main.exe" />
+		<Unit filename="main.o" />
+		<Unit filename="registration.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="registration.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -13,4 +13,7 @@ float calculateWardCost(int patientIndex);
 // function to calculate age-based subsidy discount
 float calculateAgeDiscount(int patientIndex, float grossTotal);
 
+// function to print the patient receipt
+void generateBill(int patientIndex);
+
 #endif

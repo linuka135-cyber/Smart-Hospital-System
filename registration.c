@@ -67,11 +67,9 @@ void registerPatient() {
         patientAssignedBed[i] = 0;
     }
 
-    int waitMins = calculateWaitTime(i);
-    float initialFee = calculateConsultationFee(i);
-    printf(">> estimated wait time: %d minutes\n", waitMins);
-    printf(">> initial consultation fee (with surcharges): Rs %.2f\n", initialFee);
 
+    generateBill(i); 
+    
     totalPatients++;
     printf("\nRegistration complete!\n");
 }

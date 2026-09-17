@@ -2,6 +2,7 @@
 #include <string.h> 
 #include "data.h"
 #include "registration.h"
+#include "billing.h"
 
 void registerPatient() {
 
@@ -65,6 +66,11 @@ void registerPatient() {
         patientDaysAdmitted[i] = 0;
         patientAssignedBed[i] = 0;
     }
+
+    int waitMins = calculateWaitTime(i);
+    float initialFee = calculateConsultationFee(i);
+    printf(">> estimated wait time: %d minutes\n", waitMins);
+    printf(">> initial consultation fee (with surcharges): Rs %.2f\n", initialFee);
 
     totalPatients++;
     printf("\nRegistration complete!\n");

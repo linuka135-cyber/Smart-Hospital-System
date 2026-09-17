@@ -7,4 +7,10 @@ int calculateWaitTime(int patientIndex);
 // function to calculate the consultation fee with urgency surcharges
 float calculateConsultationFee(int patientIndex);
 
+// function to calculate total ward stay cost
+float calculateWardCost(int patientIndex);
+
+// function to calculate age-based subsidy discount
+float calculateAgeDiscount(int patientIndex, float grossTotal);
+
 #endif

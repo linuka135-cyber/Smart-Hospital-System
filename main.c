@@ -27,10 +27,8 @@ int main() {
         printf("Enter your choice: ");
         int check = scanf("%d", &choice); 
         
-        // 2. Clear the buffer
         while (getchar() != '\n'); 
 
-        // 3. If they typed a letter, force choice to 0 so it safely hits 'default'
         if (check != 1) {
             choice = 0; 
         }

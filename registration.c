@@ -12,6 +12,7 @@ void registerPatient() {
     }
 
     int i = totalPatients;
+    int check;
 
     printf("\n--- Patient Registration ---\n");
 
@@ -20,25 +21,81 @@ void registerPatient() {
     fgets(patientNames[i], 100, stdin);
     patientNames[i][strcspn(patientNames[i], "\n")] = 0;
 
-    printf("Enter patient age: ");
-    scanf("%d", &patientAges[i]);
+    do {
+        printf("Enter patient age: ");
+        check = scanf("%d", &patientAges[i]);
+        while (getchar() != '\n'); 
 
-    printf("Enter urgency level (1 = normal, 2 = urgent, 3 = critical): ");
-    scanf("%d", &patientUrgency[i]);
+        if (check != 1 || patientAges[i] < 0 || patientAges[i] > 200) {
+            printf(">> error: please enter a valid age (0-200).\n");
+        } else {
+            break;
+        }
+    } while (1);
 
-    printf("Enter specialty ID (1 to 4): ");
-    scanf("%d", &patientSpecialtyID[i]);
+    do {
+        printf("Enter urgency level (1 = normal, 2 = urgent, 3 = critical): ");
+        check = scanf("%d", &patientUrgency[i]);
+        while (getchar() != '\n'); 
+
+        if (check != 1 || patientUrgency[i] < 1 || patientUrgency[i] > 3) {
+            printf(">> error: please enter 1, 2, or 3.\n");
+        } else {
+            break;
+        }
+    } while (1);
+
+    do {
+        printf("Enter specialty ID (1 to 4): ");
+        check = scanf("%d", &patientSpecialtyID[i]);
+        while (getchar() != '\n'); 
+
+        if (check != 1 || patientSpecialtyID[i] < 1 || patientSpecialtyID[i] > 4) {
+            printf(">> error: please enter a valid ID between 1 and 4.\n");
+        } else {
+            break;
+        }
+    } while (1);
     
     specialtyQueueCounts[patientSpecialtyID[i] - 1]++;
 
-    printf("Is patient admitted to ward? (1 = yes, 0 = no): ");
-    scanf("%d", &patientIsAdmitted[i]);
+    do {
+        printf("Is patient admitted to ward? (1 = yes, 0 = no): ");
+        check = scanf("%d", &patientIsAdmitted[i]);
+        while (getchar() != '\n'); 
+
+        if (check != 1 || (patientIsAdmitted[i] != 0 && patientIsAdmitted[i] != 1)) {
+            printf(">> error: please enter 1 for yes or 0 for no.\n");
+        } else {
+            break;
+        }
+    } while (1);
 
     if (patientIsAdmitted[i] == 1) {
-        printf("Enter ward ID (1 to 4): ");
-        scanf("%d", &patientWardID[i]);
-        printf("Enter days admitted: ");
-        scanf("%d", &patientDaysAdmitted[i]);
+        do {
+            printf("Enter ward ID (1 to 4): ");
+            check = scanf("%d", &patientWardID[i]);
+            while (getchar() != '\n'); 
+
+            if (check != 1 || patientWardID[i] < 1 || patientWardID[i] > 4) {
+                printf(">> error: please enter a valid ward ID between 1 and 4.\n");
+            } else {
+                break;
+            }
+        } while (1);
+
+
+        do {
+            printf("Enter days admitted: ");
+            check = scanf("%d", &patientDaysAdmitted[i]);
+            while (getchar() != '\n'); 
+
+            if (check != 1 || patientDaysAdmitted[i] <= 0) {
+                printf(">> error: please enter a number greater than 0.\n");
+            } else {
+                break;
+            }
+        } while (1);
 
         // bed allocation
         int wardIndex = patientWardID[i] - 1;

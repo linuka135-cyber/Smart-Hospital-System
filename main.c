@@ -3,6 +3,7 @@
 #include "data.h"
 #include "registration.h"
 #include "sorting.h"
+#include "analytics.h"
 
 
 int main() {
@@ -40,13 +41,11 @@ int main() {
                 break;
 
             case 3:
-                printf("\n--- Performance Analytics ---\n");
-
-
-
-
-
+                displayAnalytics();
+                printf("\n>> Press Enter to return to the main menu...\n");
+                system("pause > nul");
                 break;
+
             case 4:
                 printf("\nExiting system. Have a great day!\n");
 

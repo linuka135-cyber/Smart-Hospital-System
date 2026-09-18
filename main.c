@@ -25,7 +25,15 @@ int main() {
         printf("4. Exit System\n");
         printf("===========================================\n");
         printf("Enter your choice: ");
-        scanf("%d", &choice);
+        int check = scanf("%d", &choice); 
+        
+        // 2. Clear the buffer
+        while (getchar() != '\n'); 
+
+        // 3. If they typed a letter, force choice to 0 so it safely hits 'default'
+        if (check != 1) {
+            choice = 0; 
+        }
 
         switch (choice) {
             case 1:
@@ -48,12 +56,14 @@ int main() {
 
             case 4:
                 printf("\nExiting system. Have a great day!\n");
-
-
-
                 break;
+
             default:
                 printf("\nInvalid choice. Please enter a number between 1 and 4.\n");
+                printf(">> Press Enter to try again...\n");
+                system("pause > nul");
+                choice = 0;
+                break;
         }
     } while (choice != 4);
 

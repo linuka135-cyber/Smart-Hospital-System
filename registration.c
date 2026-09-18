@@ -15,8 +15,6 @@ void registerPatient() {
 
     printf("\n--- Patient Registration ---\n");
 
-    int c;
-    while ((c = getchar()) != '\n' && c != EOF);
 
     printf("Enter patient name: ");
     fgets(patientNames[i], 100, stdin);

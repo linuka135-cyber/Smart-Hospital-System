@@ -29,12 +29,16 @@ int main() {
         switch (choice) {
             case 1:
                 registerPatient();
+                printf("\n>> Press Enter to return to the main menu...\n");
+                system("pause > nul");
                 break;
 
             case 2:
                 displayPriorityQueue();
+                printf("\n>> Press Enter to return to the main menu...\n");
+                system("pause > nul");
                 break;
-                
+
             case 3:
                 printf("\n--- Performance Analytics ---\n");
 

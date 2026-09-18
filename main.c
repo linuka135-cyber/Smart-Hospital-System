@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "data.h"
 #include "registration.h"
+#include "sorting.h"
 
 
 int main() {
@@ -31,11 +32,9 @@ int main() {
                 break;
 
             case 2:
-                printf("\n--- Triage Priority Queue ---\n");
-
-
-
+                displayPriorityQueue();
                 break;
+                
             case 3:
                 printf("\n--- Performance Analytics ---\n");
 

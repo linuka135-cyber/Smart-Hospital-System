@@ -3,6 +3,7 @@
 #include "data.h"
 #include "registration.h"
 #include "billing.h"
+#include "files.h"
 
 void registerPatient() {
 
@@ -123,7 +124,9 @@ void registerPatient() {
     }
 
 
-    generateBill(i); 
+    generateBill(i);
+    
+    savePatientRecord(i);
     
     totalPatients++;
     printf("\nRegistration complete!\n");

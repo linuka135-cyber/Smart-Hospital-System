@@ -4,6 +4,7 @@
 #include "registration.h"
 #include "sorting.h"
 #include "analytics.h"
+#include "files.h"
 
 
 int main() {
@@ -13,6 +14,8 @@ int main() {
             bedOccupancy[ward][bed] = 0;
         }
     }
+
+    loadBedStatus();
 
     int choice;
     do {
@@ -53,6 +56,7 @@ int main() {
                 break;
 
             case 4:
+                saveBedStatus();
                 printf("\nExiting system. Have a great day!\n");
                 break;
 

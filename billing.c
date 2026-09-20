@@ -51,7 +51,7 @@ float calculateAgeDiscount(int patientIndex, float grossTotal) {
     
 
     if (age < 5 || age > 65) {
-        return grossTotal * 0.10; 
+        return grossTotal * 0.15; 
     }
     
     return 0.00;
